@@ -2,16 +2,14 @@ const alfy = require('alfy');
 const algoliasearch = require('algoliasearch');
 const { last } = require('lodash');
 
-const client = algoliasearch(
-	'BH4D9OD16A',
-	'97f135e4b5f5487fb53f0f2dae8db59d'
-);
+const client = algoliasearch('BH4D9OD16A', '97f135e4b5f5487fb53f0f2dae8db59d');
 const index = client.initIndex('vuex');
 
 (async () => {
 	const { hits } = await index.search({
 		query: alfy.input,
-		hitsPerPage: 5
+		hitsPerPage: 5,
+		facetFilters: ['tags:en']
 	});
 
 	const output = hits.map(hit => {
