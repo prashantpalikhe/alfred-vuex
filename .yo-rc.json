@@ -1,0 +1,11 @@
+{
+  "generator-alfred-algolia": {
+    "promptValues": {
+      "githubUsername": "prashantpalikhe",
+      "website": "https://twitter.com/prashantPalikhe",
+      "algoliaApplicationId": "BH4D9OD16A",
+      "algoliaApiKey": "97f135e4b5f5487fb53f0f2dae8db59d",
+      "algoliaIndex": "vuex"
+    }
+  }
+}
