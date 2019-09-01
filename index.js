@@ -9,7 +9,7 @@ const index = client.initIndex('vuex');
 	const { hits } = await index.search({
 		query: alfy.input,
 		hitsPerPage: 5,
-		facetFilters: ['tags:en']
+		facetFilters: ['lang:en-US']
 	});
 
 	const output = hits.map(hit => {
